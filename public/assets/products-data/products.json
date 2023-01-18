@@ -1,0 +1,44 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "Tool Bag - Sand",
+            "images": {
+            "img1": "assets/images/products-bags/FrenToolMatCatalogue4795-Edit_533xSAND.webp",
+            "img2": "assets/images/products-bags/Fren_Tool4478_533xSAND.webp"}
+
+        },
+        {
+            "id": 2,
+            "name": "Tool Bag - Bone",
+            "images": {
+                "img1": "assets/images/products-bags/FrenToolMatCatalogue5049_533xBONE.webp",
+                "img2": "assets/images/products-bags/Fren_Tool4506_533xBONE.webp"}
+
+        },
+        {
+            "id": 3,
+            "name": "Tool Bag - Water",
+            "images": {
+                "img1": "assets/images/products-bags/FrenToolMatCatalogue5025-Edit_533xWATER.webp",
+                "img2": "assets/images/products-bags/Fren_Tool4516_533xWATER.webp"}
+
+        },
+        {
+            "id": 4,
+            "name": "Tool Bag - Mod",
+            "images": {
+                "img1": "assets/images/products-bags/FrenToolMatCatalogue4831-Edit-2_533xMOD.webp",
+                "img2": "assets/images/products-bags/Fren_Tool4448_533xMOD.webp"}
+
+        },
+        {
+            "id": 5,
+            "name": "Tool Bag - Asphalt",
+            "images": {
+                "img1": "assets/images/products-bags/FrenToolMatCatalogue4761-Edit_750xASPHALT.webp",
+                "img2": "assets/images/products-bags/Fren_Tool4534_533xASPHALT.webp"}
+
+        }
+    ]
+}

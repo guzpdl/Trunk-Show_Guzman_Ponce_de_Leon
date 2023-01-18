@@ -11,23 +11,22 @@ const NavBar = () => {
   const [cart, setCart] = useState([]);
 
   return (
-    <Navbar className="square border-bottom border-dark" bg="light" expand="lg">
+    <Navbar bg="white" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Trunk Show </Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src="/assets/images/logo.webp" alt="logoFren" />{" "}
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home"> Home </Nav.Link>
+            <Nav.Link href="/"> Home </Nav.Link>
             <NavDropdown title="Products">
-              <NavDropdown.Item href="#action/3.1">
-                Travel organizers
-              </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Accesories</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Bags</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="#link"> Personalized orders </Nav.Link>
           </Nav>
-          <button
+          {/* <button
             type="submit"
             onClick={() => {
               const cartCounter = [...cart];
@@ -36,7 +35,7 @@ const NavBar = () => {
             }}
           >
             TRY CART COUNTER!!!
-          </button>
+          </button> */}
           <Nav.Link className="m-3" href="#link">
             <CartWidget cart={cart} setCart={setCart} />
           </Nav.Link>
@@ -47,7 +46,7 @@ const NavBar = () => {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-primary">Search</Button>
+            <Button variant="outline-secondary">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

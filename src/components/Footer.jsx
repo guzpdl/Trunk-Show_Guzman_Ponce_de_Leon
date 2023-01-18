@@ -27,10 +27,10 @@ const Footer = () => {
 
         <div>
           <a href="" className="me-4 text-reset">
-            <SocialIcon url="https://facebook.com/TrunkShowManila/" />
+            <SocialIcon url="https://m.facebook.com/fren.supply/" />
           </a>
           <a href="" className="me-4 text-reset">
-            <SocialIcon url="https://www.instagram.com/trunkshowmanila/" />
+            <SocialIcon url="https://www.instagram.com/fren.supply/?hl=en" />
           </a>
         </div>
       </section>
@@ -102,7 +102,7 @@ const Footer = () => {
               </p>
               <p>
                 <FontAwesomeIcon icon={faEnvelope} className="me-3" />
-                trunkshowmanila@gmail.com
+                contact@fren-supply.com
               </p>
               <p>
                 <FontAwesomeIcon icon={faPhone} className="me-3" /> + 01 234 567
@@ -121,7 +121,7 @@ const Footer = () => {
         className="text-center p-4"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
       >
-        © 2023 Copyright
+        © 2023 Copyright Guzman Ponce de Leon
       </div>
     </MDBFooter>
   );
