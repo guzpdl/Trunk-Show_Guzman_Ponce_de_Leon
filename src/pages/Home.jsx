@@ -2,11 +2,11 @@ import React from "react";
 import Banner from "../components/Banner";
 import ItemListContainer from "../components/ItemListContainer";
 
-const Home = () => {
+const Home = ({ bags, totes }) => {
   return (
     <>
       <Banner />
-      <ItemListContainer />
+      <ItemListContainer bags={bags} totes={totes} />
     </>
   );
 };

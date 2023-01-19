@@ -6,36 +6,35 @@ import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [cart, setCart] = useState([]);
 
+  const navigate = useNavigate();
+
+  const handleClick = (eventHTML) => {
+    eventHTML.preventDefault();
+    navigate("/");
+  };
+
   return (
     <Navbar bg="white" expand="lg">
       <Container>
-        <Navbar.Brand href="/">
-          <img src="/assets/images/logo.webp" alt="logoFren" />{" "}
-        </Navbar.Brand>
+        <Link onClick={handleClick}>
+          <Navbar.Brand>
+            <img src="/assets/images/logo.webp" alt="logoFren" />{" "}
+          </Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/"> Home </Nav.Link>
+            <Nav.Link onClick={handleClick}> Home </Nav.Link>
             <NavDropdown title="Products">
-              <NavDropdown.Item href="#action/3.2">Accesories</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Totes</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Bags</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link"> Personalized orders </Nav.Link>
           </Nav>
-          {/* <button
-            type="submit"
-            onClick={() => {
-              const cartCounter = [...cart];
-              cartCounter.push(1);
-              setCart(cartCounter);
-            }}
-          >
-            TRY CART COUNTER!!!
-          </button> */}
           <Nav.Link className="m-3" href="#link">
             <CartWidget cart={cart} setCart={setCart} />
           </Nav.Link>

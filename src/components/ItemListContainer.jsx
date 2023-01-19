@@ -1,38 +1,58 @@
-import React, { useEffect, useState } from "react";
-import { Container, Card } from "react-bootstrap";
-import getProducts from "../service/axios.service";
+import React from "react";
+import { Container, Card, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const ItemListContainer = () => {
-  const [products, setProducts] = useState([]);
-
-  const productData = () => {
-    getProducts()
-      .then((productsInfo) => {
-        setProducts(productsInfo.products);
-      })
-      .catch((error) => console.log(error));
-  };
-
-  useEffect(() => {
-    productData();
-  }, []);
-
+const ItemListContainer = ({ bags, totes }) => {
   return (
     <Container className="my-4 text-muted">
-      <h2 className="ms-2 text-start">Tool Bags</h2>
-      <div className="d-flex">
-        {products.map((productDetails, index) => {
-          console.log(productDetails);
-          return (
-            <Card key={index} className="mx-2" style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={productDetails.images.img1} />
-              <Card.Body>
-                <Card.Title>{productDetails.name}</Card.Title>
-              </Card.Body>
-            </Card>
-          );
-        })}
-      </div>
+      <Row>
+        <h2 className=" text-start">Tool Bags</h2>
+        <div className="d-flex flex-wrap">
+          {bags?.map((bag, index) => {
+            return (
+              <Card
+                key={index}
+                className="mx-2 square border border-white"
+                style={{ width: "15rem" }}
+              >
+                <Link
+                  to={`/${bag.category}/${bag.id}`}
+                  className="text-muted"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Card.Img variant="top" src={bag.images.img1} />
+                  <Card.Body>
+                    <Card.Title>{bag.name}</Card.Title>
+                  </Card.Body>
+                </Link>
+              </Card>
+            );
+          })}
+        </div>
+        <h2 className="mt-4 ms-2 text-start">Tour Totes</h2>
+        <div className="d-flex flex-wrap">
+          {totes?.map((tote, index) => {
+            return (
+              <Card
+                key={index}
+                className="mx-2 square border border-white"
+                style={{ width: "15rem" }}
+              >
+                <Link
+                  to={`/${tote.category}/${tote.id}`}
+                  className="text-muted"
+                  style={{ textDecoration: "none" }}
+                >
+                  <Card.Img variant="top" src={tote.images.img1} />
+                  <Card.Body>
+                    <Card.Title>{tote.name}</Card.Title>
+                  </Card.Body>
+                </Link>
+              </Card>
+            );
+          })}
+        </div>
+      </Row>
     </Container>
   );
 };

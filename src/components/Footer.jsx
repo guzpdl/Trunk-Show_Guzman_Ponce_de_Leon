@@ -26,9 +26,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <a href="" className="me-4 text-reset" />
-          <SocialIcon url="https://m.facebook.com/fren.supply/" />
-          <a href={null} className="me-4 text-reset" />
+          <SocialIcon
+            className="mx-1"
+            url="https://m.facebook.com/fren.supply/"
+          />
           <SocialIcon url="https://www.instagram.com/fren.supply/?hl=en" />
         </div>
       </section>

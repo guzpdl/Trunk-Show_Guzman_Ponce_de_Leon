@@ -1,4 +1,5 @@
 import React from "react";
+import { CartProvider } from "./context/CartContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -9,7 +10,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </Router>
   </React.StrictMode>
 );
