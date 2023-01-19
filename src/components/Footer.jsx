@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <MDBFooter
       bgColor="light"
-      className="text-center text-lg-start text-muted square border-top border-dark"
+      className="text-center text-lg-start text-muted square border-top border-secondary"
     >
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="d-none d-lg-block">
@@ -26,12 +26,10 @@ const Footer = () => {
         </div>
 
         <div>
-          <a href="" className="me-4 text-reset">
-            <SocialIcon url="https://m.facebook.com/fren.supply/" />
-          </a>
-          <a href="" className="me-4 text-reset">
-            <SocialIcon url="https://www.instagram.com/fren.supply/?hl=en" />
-          </a>
+          <a href="" className="me-4 text-reset" />
+          <SocialIcon url="https://m.facebook.com/fren.supply/" />
+          <a href={null} className="me-4 text-reset" />
+          <SocialIcon url="https://www.instagram.com/fren.supply/?hl=en" />
         </div>
       </section>
 
@@ -41,7 +39,7 @@ const Footer = () => {
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <MDBIcon icon="gem" className="me-3" />
-                Trunk Show
+                Fren Supply
               </h6>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
@@ -53,11 +51,6 @@ const Footer = () => {
 
             <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-              <p>
-                <a href="#!" className="text-reset text-decoration-none">
-                  Travel organizers
-                </a>
-              </p>
               <p>
                 <a href="#!" className="text-reset text-decoration-none">
                   Accesories
