@@ -15,13 +15,13 @@ const NavBar = () => {
 
   const handleClick = (eventHTML) => {
     eventHTML.preventDefault();
-    navigate("/");
+    navigate(`/${eventHTML.target.id}`);
   };
 
   return (
     <Navbar bg="white" expand="lg">
       <Container>
-        <Link onClick={handleClick}>
+        <Link onClick={handleClick} id="">
           <Navbar.Brand>
             <img src="/assets/images/logo.webp" alt="logoFren" />{" "}
           </Navbar.Brand>
@@ -29,10 +29,17 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link onClick={handleClick}> Home </Nav.Link>
+            <Nav.Link onClick={handleClick} id="">
+              {" "}
+              Home{" "}
+            </Nav.Link>
             <NavDropdown title="Products">
-              <NavDropdown.Item href="#action/3.2">Totes</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Bags</NavDropdown.Item>
+              <NavDropdown.Item id="totes" onClick={handleClick}>
+                Totes
+              </NavDropdown.Item>
+              <NavDropdown.Item id="bags" onClick={handleClick}>
+                Bags
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav.Link className="m-3" href="#link">

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import ItemDetails from "../pages/ItemDetails";
+import Products from "../pages/Products";
 import getProducts from "../service/axios.service";
 
 const AppRoutes = () => {
@@ -25,6 +26,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home bags={bags} totes={totes} />} />
+      <Route path="/:category" element={<Products />} />
       <Route
         path="/:category/:itemId"
         element={<ItemDetails products={products} />}
