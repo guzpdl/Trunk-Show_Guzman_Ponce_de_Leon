@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Card } from "react-bootstrap";
+import { Container, Row, Card, Button } from "react-bootstrap";
 import { useParams, Link } from "react-router-dom";
 
 const Products = ({ products, bags, totes }) => {
@@ -74,6 +74,11 @@ const Products = ({ products, bags, totes }) => {
                 );
               })}
         </div>
+        {categoryParam !== "products" ? (
+          <Link to={"/products"}>
+            <Button variant="outline-secondary">See all our products</Button>
+          </Link>
+        ) : null}
       </Row>
     </Container>
   );

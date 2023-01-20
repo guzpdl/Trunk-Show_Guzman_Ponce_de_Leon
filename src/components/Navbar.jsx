@@ -19,7 +19,7 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar bg="white" expand="lg">
+    <Navbar bg="white" expand="lg" sticky="top">
       <Container>
         <Link onClick={handleClick} id="">
           <Navbar.Brand>
