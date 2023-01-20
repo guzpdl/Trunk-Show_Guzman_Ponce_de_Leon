@@ -1,145 +1,137 @@
 {
-    "products":[
+  "products": [
+    {
+      "id": 1,
+      "name": "Tool Bag - Sand",
+      "price": 45,
+      "category": "bags",
+      "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
+      "images": {
+        "img1": "assets/images/products-bags/FrenToolMatCatalogue4795-Edit_533xSAND.webp",
+        "img2": "assets/images/products-bags/Fren_Tool4478_533xSAND.webp"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tool Bag - Bone",
+      "price": 45,
+      "category": "bags",
+      "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
+      "images": {
+        "img1": "assets/images/products-bags/FrenToolMatCatalogue5049_533xBONE.webp",
+        "img2": "assets/images/products-bags/Fren_Tool4506_533xBONE.webp"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Tool Bag - Water",
+      "price": 45,
+      "category": "bags",
+      "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
+      "images": {
+        "img1": "assets/images/products-bags/FrenToolMatCatalogue5025-Edit_533xWATER.webp",
+        "img2": "assets/images/products-bags/Fren_Tool4516_533xWATER.webp"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Tool Bag - Mod",
+      "price": 45,
+      "category": "bags",
+      "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
+      "images": {
+        "img1": "assets/images/products-bags/FrenToolMatCatalogue4831-Edit-2_533xMOD.webp",
+        "img2": "assets/images/products-bags/Fren_Tool4448_533xMOD.webp"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Tool Bag - Asphalt",
+      "price": 45,
+      "category": "bags",
+      "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
+      "images": {
+        "img1": "assets/images/products-bags/FrenToolMatCatalogue4761-Edit_750xASPHALT.webp",
+        "img2": "assets/images/products-bags/Fren_Tool4534_533xASPHALT.webp"
+      }
+    },
 
-    
-                {
-                    "id": 1,
-                    "name": "Tool Bag - Sand",
-                    "price": 45,
-                    "category": "bag",
-                    "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
-                    "images": {
-                    "img1": "assets/images/products-bags/FrenToolMatCatalogue4795-Edit_533xSAND.webp",
-                    "img2": "assets/images/products-bags/Fren_Tool4478_533xSAND.webp"}
-        
-                },
-                {
-                    "id": 2,
-                    "name": "Tool Bag - Bone",
-                    "price": 45,
-                    "category": "bag",
-                    "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
-                    "images": {
-                        "img1": "assets/images/products-bags/FrenToolMatCatalogue5049_533xBONE.webp",
-                        "img2": "assets/images/products-bags/Fren_Tool4506_533xBONE.webp"}
-        
-                },
-                {
-                    "id": 3,
-                    "name": "Tool Bag - Water",
-                    "price": 45,
-                    "category": "bag",
-                    "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
-                    "images": {
-                        "img1": "assets/images/products-bags/FrenToolMatCatalogue5025-Edit_533xWATER.webp",
-                        "img2": "assets/images/products-bags/Fren_Tool4516_533xWATER.webp"}
-        
-                },
-                {
-                    "id": 4,
-                    "name": "Tool Bag - Mod",
-                    "price": 45,
-                    "category": "bag",
-                    "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
-                    "images": {
-                        "img1": "assets/images/products-bags/FrenToolMatCatalogue4831-Edit-2_533xMOD.webp",
-                        "img2": "assets/images/products-bags/Fren_Tool4448_533xMOD.webp"}
-        
-                },
-                {
-                    "id": 5,
-                    "name": "Tool Bag - Asphalt",
-                    "price": 45,
-                    "category": "bag",
-                    "description": "Also made from our waxed canvass collection, the Fren Tool Bag fits all your everyday essentials. Its structure has a round base and has four (4) outer pockets for other essentials and a handle-sling combination. One additional feature is a small secret pocket on the inside of one of the handles for bills or any small item.",
-                    "images": {
-                        "img1": "assets/images/products-bags/FrenToolMatCatalogue4761-Edit_750xASPHALT.webp",
-                        "img2": "assets/images/products-bags/Fren_Tool4534_533xASPHALT.webp"}
-        
-                } ,   
-    
-            
-
-      
-        
-                {
-                    "id": 6,
-                    "name": "Tour Tote - Bone",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1": "assets/images/products-totes/FREN_CATALOGUE0168-Edit_750xBONE.webp",
-                        "img2": "assets/images/products-totes/fren_ps0480-Edit_750xBONE.webp"
-                    }
-                },
-                {
-                    "id": 7,
-                    "name": "Tour Tote - Cobalt",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1": "assets/images/products-totes/Fren_Holiday1299-Edit_750xCOBALT.webp",
-                        "img2": "assets/images/products-totes/Fren_Holiday1506_750xCOBALT.webp"
-                    }
-                },
-                {
-                    "id": 8,
-                    "name": "Tour Tote - Garnet",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1": "assets/images/products-totes/Fren_Holiday1061-Edit-2_750xGARNET.webp",
-                        "img2": "assets/images/products-totes/Fren_Holiday1488_750xGARNET.webp"
-                    }
-                },
-                {
-                    "id": 9,
-                    "name": "Tour Tote - Moss",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1": "assets/images/products-totes/FREN_CATALOGUE0350-Edit_750xMOSS.webp",
-                        "img2": "assets/images/products-totes/fren_ps0648-Edit_750xMOSS.webp"
-                    }
-                },
-                {
-                    "id": 10,
-                    "name": "Tour Tote - Mod",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1": "assets/images/products-totes/FREN_CATALOGUE0115-Edit-2_750xMOD.webp",
-                        "img2": "assets/images/products-totes/fren_ps0638-Edit_750xMOD.webp"
-                    }
-                },
-                {
-                    "id": 11,
-                    "name": "Tour Tote - Sand",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1":  "assets/images/products-totes/FREN0644-Edit_750xSAND.webp",
-                        "img2": "assets/images/products-totes/sandasphalt3911-Edit_750xSAND.webp"
-                    }
-                },
-                {
-                    "id": 12,
-                    "name": "Tour Tote - Asphalt",
-                    "category": "tote",
-                    "price": 69.99,
-                    "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
-                    "images": {
-                        "img1": "assets/images/products-totes/FREN0712-Edit_750xASPHALT.webp" ,
-                        "img2": "assets/images/products-totes/sandasphalt3908-Edit_750xASPHALT.webp"
-                    }
-                }
-            
-        
-    ]
+    {
+      "id": 6,
+      "name": "Tour Tote - Bone",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/FREN_CATALOGUE0168-Edit_750xBONE.webp",
+        "img2": "assets/images/products-totes/fren_ps0480-Edit_750xBONE.webp"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Tour Tote - Cobalt",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/Fren_Holiday1299-Edit_750xCOBALT.webp",
+        "img2": "assets/images/products-totes/Fren_Holiday1506_750xCOBALT.webp"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Tour Tote - Garnet",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/Fren_Holiday1061-Edit-2_750xGARNET.webp",
+        "img2": "assets/images/products-totes/Fren_Holiday1488_750xGARNET.webp"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Tour Tote - Moss",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/FREN_CATALOGUE0350-Edit_750xMOSS.webp",
+        "img2": "assets/images/products-totes/fren_ps0648-Edit_750xMOSS.webp"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Tour Tote - Mod",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/FREN_CATALOGUE0115-Edit-2_750xMOD.webp",
+        "img2": "assets/images/products-totes/fren_ps0638-Edit_750xMOD.webp"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Tour Tote - Sand",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/FREN0644-Edit_750xSAND.webp",
+        "img2": "assets/images/products-totes/sandasphalt3911-Edit_750xSAND.webp"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Tour Tote - Asphalt",
+      "category": "totes",
+      "price": 69.99,
+      "description": "The Tour Tote is a large sack designed to fit just about anything, a yoga mat included! It is made of waxed canvas and, like fine wine, improves over time. With its marks and creases eventually creating a rich patina, it makes for a unique personal piece as it ages.",
+      "images": {
+        "img1": "assets/images/products-totes/FREN0712-Edit_750xASPHALT.webp",
+        "img2": "assets/images/products-totes/sandasphalt3908-Edit_750xASPHALT.webp"
+      }
+    }
+  ]
 }

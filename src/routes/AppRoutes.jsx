@@ -20,13 +20,16 @@ const AppRoutes = () => {
     productData();
   }, []);
 
-  const bags = products.filter((product) => product.category === "bag");
-  const totes = products.filter((product) => product.category === "tote");
+  const bags = products.filter((product) => product.category === "bags");
+  const totes = products.filter((product) => product.category === "totes");
 
   return (
     <Routes>
       <Route path="/" element={<Home bags={bags} totes={totes} />} />
-      <Route path="/:category" element={<Products />} />
+      <Route
+        path="/:category"
+        element={<Products products={products} bags={bags} totes={totes} />}
+      />
       <Route
         path="/:category/:itemId"
         element={<ItemDetails products={products} />}

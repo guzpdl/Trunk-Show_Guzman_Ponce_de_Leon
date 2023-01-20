@@ -6,7 +6,7 @@ const ItemListContainer = ({ bags, totes }) => {
   return (
     <Container className="my-4 text-muted">
       <Row>
-        <h2 className=" text-start">Tool Bags</h2>
+        <h2 className=" text-start ms-2">Tool Bags</h2>
         <div className="d-flex flex-wrap">
           {bags?.map((bag, index) => {
             return (

@@ -22,8 +22,6 @@ const ItemDetails = ({ products }) => {
     setCount(count);
   }
 
-  console.log(selectedProduct);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
