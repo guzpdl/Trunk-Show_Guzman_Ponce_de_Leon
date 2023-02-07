@@ -13,14 +13,14 @@ const ItemDetails = ({ products }) => {
 
   let [count, setCount] = useState(0);
 
-  function incrementCount() {
+  const incrementCount = () => {
     count = count + 1;
     setCount(count);
-  }
-  function decrementCount() {
-    count = count - 1;
+  };
+  const decrementCount = () => {
+    if (count > 0) count = count - 1;
     setCount(count);
-  }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);

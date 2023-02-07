@@ -5,12 +5,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import CartWidget from "./CartWidget";
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const [cart, setCart] = useState([]);
-
   const navigate = useNavigate();
 
   const handleClick = (eventHTML) => {
@@ -43,7 +40,7 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav.Link className="m-3" href="#link">
-            <CartWidget cart={cart} setCart={setCart} />
+            <CartWidget />
           </Nav.Link>
           <Form className="d-flex">
             <Form.Control

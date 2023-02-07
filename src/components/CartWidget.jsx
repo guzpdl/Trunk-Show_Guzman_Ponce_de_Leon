@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { Badge } from "react-bootstrap";
-import { useCartContext } from "../context/CartContext";
+import { CartContext } from "../context/cart.context";
 
-const CartWidget = ({ cart }) => {
-  const { doSomething } = useCartContext;
-
-  console.log(doSomething);
+const CartWidget = () => {
+  const { cart } = useContext(CartContext);
 
   return (
     <div className="text-muted">
