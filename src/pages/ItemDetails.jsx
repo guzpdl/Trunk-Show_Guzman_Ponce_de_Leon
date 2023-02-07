@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Container, Col, Row, Image, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { CartProvider } from "../context/cart.context";
 
 const ItemDetails = ({ products }) => {
   const { itemId } = useParams();
+  // const { addItemToCart } = useContext(CartProvider);
+  let [count, setCount] = useState(0);
 
   const numberId = parseInt(itemId);
 
@@ -11,7 +14,11 @@ const ItemDetails = ({ products }) => {
     (chosenProduct) => chosenProduct.id === numberId
   );
 
-  let [count, setCount] = useState(0);
+  console.log(selectedProduct);
+
+  // const onAddToCart = () => {
+  //   addItemToCart(selectedProduct);
+  // };
 
   const incrementCount = () => {
     count = count + 1;
@@ -71,6 +78,7 @@ const ItemDetails = ({ products }) => {
               <Button
                 className="ms-1 square rounded-0"
                 variant="outline-secondary"
+                // onClick={onAddToCart()}
               >
                 Add to your bag
               </Button>
