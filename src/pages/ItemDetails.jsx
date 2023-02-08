@@ -1,24 +1,18 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Col, Row, Image, Button } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { CartProvider } from "../context/cart.context";
+import { useCartContext } from "../context/cart.context";
 
 const ItemDetails = ({ products }) => {
   const { itemId } = useParams();
-  // const { addItemToCart } = useContext(CartProvider);
   let [count, setCount] = useState(0);
+  const { addItemToCart } = useCartContext();
 
   const numberId = parseInt(itemId);
 
   const selectedProduct = products.find(
     (chosenProduct) => chosenProduct.id === numberId
   );
-
-  console.log(selectedProduct);
-
-  // const onAddToCart = () => {
-  //   addItemToCart(selectedProduct);
-  // };
 
   const incrementCount = () => {
     count = count + 1;
@@ -28,6 +22,8 @@ const ItemDetails = ({ products }) => {
     if (count > 0) count = count - 1;
     setCount(count);
   };
+
+  addItemToCart(selectedProduct);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -78,7 +74,6 @@ const ItemDetails = ({ products }) => {
               <Button
                 className="ms-1 square rounded-0"
                 variant="outline-secondary"
-                // onClick={onAddToCart()}
               >
                 Add to your bag
               </Button>
