@@ -4,8 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import CartWidget from "./CartWidget";
 import { Link, useNavigate } from "react-router-dom";
+import CartModal from "./CartModal";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
           <Nav.Link className="m-3" href="#link">
-            <CartWidget />
+            <CartModal />
           </Nav.Link>
           <Form className="d-flex">
             <Form.Control
