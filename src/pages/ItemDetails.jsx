@@ -23,8 +23,6 @@ const ItemDetails = ({ products }) => {
     setCount(count);
   };
 
-  addItemToCart(selectedProduct);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -74,6 +72,7 @@ const ItemDetails = ({ products }) => {
               <Button
                 className="ms-1 square rounded-0"
                 variant="outline-secondary"
+                onClick={() => addItemToCart(selectedProduct, count)}
               >
                 Add to your bag
               </Button>

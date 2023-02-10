@@ -3,10 +3,19 @@ import { Button, Modal } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import "./CartModal.css";
 import { useCartContext } from "../context/cart.context";
+import { useNavigate } from "react-router-dom";
 
 const CartModal = () => {
   const [show, setShow] = useState(false);
   const { cart } = useCartContext();
+
+  const navigate = useNavigate();
+
+  const handleClick = (eventHTML) => {
+    eventHTML.preventDefault();
+    navigate(`/${eventHTML.target.id}`);
+    setShow(false);
+  };
 
   return (
     <>
@@ -30,7 +39,15 @@ const CartModal = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p></p>
+          <h4>is empty. Check our products and add them to your bag.</h4>
+          <Button
+            onClick={handleClick}
+            id="products"
+            variant="outline-secondary"
+            className="mt-2"
+          >
+            List of products
+          </Button>
         </Modal.Body>
       </Modal>
     </>
