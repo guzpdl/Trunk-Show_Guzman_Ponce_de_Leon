@@ -4,6 +4,7 @@ import CartWidget from "./CartWidget";
 import "./CartModal.css";
 import { useCartContext } from "../context/cart.context";
 import { useNavigate } from "react-router-dom";
+import CartFigures from "./CartFigures";
 
 const CartModal = () => {
   const [show, setShow] = useState(false);
@@ -39,15 +40,21 @@ const CartModal = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>is empty. Check our products and add them to your bag.</h4>
-          <Button
-            onClick={handleClick}
-            id="products"
-            variant="outline-secondary"
-            className="mt-2"
-          >
-            List of products
-          </Button>
+          {cart.length === 0 ? (
+            <>
+              <h4>is empty. Check our products and add them to your bag.</h4>
+              <Button
+                onClick={handleClick}
+                id="products"
+                variant="outline-secondary"
+                className="mt-2"
+              >
+                List of products
+              </Button>
+            </>
+          ) : (
+            <CartFigures cartContent={cart} />
+          )}
         </Modal.Body>
       </Modal>
     </>
