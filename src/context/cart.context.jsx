@@ -9,14 +9,17 @@ const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
 
   const addItemToCart = (itemData, amount) => {
+    Number(amount);
     if (amount === 0) return;
-    itemData.amount = amount;
-
-    setCart([...cart, itemData]);
-    console.log(cart);
+    if (cart.some((element) => element.id === itemData.id)) {
+      let newCart = [...cart];
+      itemData.amount += amount;
+      setCart([...newCart]);
+    } else {
+      itemData.amount = amount;
+      setCart([...cart, itemData]);
+    }
   };
-
-  console.log(cart);
 
   return (
     <CartContext.Provider value={{ cart, addItemToCart }}>

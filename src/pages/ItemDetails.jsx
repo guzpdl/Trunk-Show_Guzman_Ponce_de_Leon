@@ -72,7 +72,10 @@ const ItemDetails = ({ products }) => {
               <Button
                 className="ms-1 square rounded-0"
                 variant="outline-secondary"
-                onClick={() => addItemToCart(selectedProduct, count)}
+                onClick={() => {
+                  addItemToCart(selectedProduct, count);
+                  setCount(0);
+                }}
               >
                 Add to your bag
               </Button>
