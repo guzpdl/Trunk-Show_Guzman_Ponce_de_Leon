@@ -56,6 +56,30 @@ const CartModal = () => {
             <CartFigures cartContent={cart} />
           )}
         </Modal.Body>
+        {cart.length !== 0 && (
+          <>
+            <Modal.Footer>
+              <Modal.Title>
+                Total:{" "}
+                {cart
+                  .map((product) => product.amount * product.price)
+                  .reduce((prev, next) => prev + next)}
+              </Modal.Title>
+            </Modal.Footer>
+            <Modal.Footer>
+              <Button
+                onClick={handleClick}
+                id="products"
+                variant="outline-secondary"
+              >
+                Add more products to your bag
+              </Button>
+              <Button variant="success" className="bg-white text-success">
+                Proceed to payment
+              </Button>
+            </Modal.Footer>
+          </>
+        )}
       </Modal>
     </>
   );
