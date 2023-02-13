@@ -63,7 +63,8 @@ const CartModal = () => {
                 Total:{" "}
                 {cart
                   .map((product) => product.amount * product.price)
-                  .reduce((prev, next) => prev + next)}
+                  .reduce((prev, next) => prev + next)
+                  .toFixed(2)}
               </Modal.Title>
             </Modal.Footer>
             <Modal.Footer>

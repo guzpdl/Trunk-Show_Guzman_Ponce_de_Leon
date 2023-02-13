@@ -28,7 +28,9 @@ const CartFigures = ({ cartContent }) => {
           </Col>
           <Col>
             <h6>Sub total</h6>
-            <Figure.Caption>{item.amount * item.price}</Figure.Caption>
+            <Figure.Caption>
+              {(item.amount * item.price).toFixed(2)}
+            </Figure.Caption>
           </Col>
           <Col>
             <Button className="bg-white text-danger" variant="danger">
