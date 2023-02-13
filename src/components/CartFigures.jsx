@@ -1,8 +1,15 @@
 import React from "react";
 import { Container, Figure, Row, Col, Button } from "react-bootstrap";
+import { useCartContext } from "../context/cart.context";
 
 const CartFigures = ({ cartContent }) => {
   console.log(cartContent);
+
+  const { removeItemFromCart } = useCartContext();
+
+  const handleRemove = (eventHTML) => {
+    removeItemFromCart(+eventHTML.target.value);
+  };
 
   return cartContent.map((item, index) => {
     return (
@@ -33,7 +40,12 @@ const CartFigures = ({ cartContent }) => {
             </Figure.Caption>
           </Col>
           <Col>
-            <Button className="bg-white text-danger" variant="danger">
+            <Button
+              value={item.id}
+              className="bg-white text-danger"
+              variant="danger"
+              onClick={handleRemove}
+            >
               Remove product
             </Button>
           </Col>

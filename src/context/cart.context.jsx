@@ -9,10 +9,9 @@ const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
 
   const addItemToCart = (itemData, amount) => {
-    Number(amount);
     if (amount === 0) return;
     if (cart.some((element) => element.id === itemData.id)) {
-      let newCart = [...cart];
+      const newCart = [...cart];
       itemData.amount += amount;
       setCart([...newCart]);
     } else {
@@ -21,8 +20,12 @@ const CartProvider = (props) => {
     }
   };
 
+  const removeItemFromCart = (itemId) => {
+    const newCart = [...cart];
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addItemToCart }}>
+    <CartContext.Provider value={{ cart, addItemToCart, removeItemFromCart }}>
       {props.children}
     </CartContext.Provider>
   );
