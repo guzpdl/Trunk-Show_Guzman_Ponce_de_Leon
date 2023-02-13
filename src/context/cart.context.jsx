@@ -7,6 +7,7 @@ export const useCartContext = () => {
 
 const CartProvider = (props) => {
   const [cart, setCart] = useState([]);
+  // const [total, setTotal] = useState(0);
 
   const addItemToCart = (itemData, amount) => {
     if (amount === 0) return;
@@ -21,7 +22,14 @@ const CartProvider = (props) => {
   };
 
   const removeItemFromCart = (itemId) => {
-    const newCart = [...cart];
+    let newCart = [...cart];
+
+    // let newCartWithoutItem = newCart.filter((object) => object.id !== itemId);
+
+    newCart.length = 0;
+
+    console.log(newCart.length);
+    setCart([newCart]);
   };
 
   return (
