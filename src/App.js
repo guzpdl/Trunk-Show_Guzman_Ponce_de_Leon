@@ -3,7 +3,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
 import AppRoutes from "./routes/AppRoutes";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <NavBar />
@@ -11,6 +11,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
