@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Container, Figure, Row, Col, Button } from "react-bootstrap";
 import { useCartContext } from "../context/cart.context";
 
@@ -25,7 +25,7 @@ const CartFigures = () => {
           </Col>
           <Col>
             <h6>Price</h6>
-            <Figure.Caption>{item?.price}</Figure.Caption>
+            <Figure.Caption>${item?.price}</Figure.Caption>
           </Col>
           <Col>
             <h6>Quantity</h6>
@@ -34,7 +34,7 @@ const CartFigures = () => {
           <Col>
             <h6>Sub total</h6>
             <Figure.Caption>
-              {(item?.amount * item?.price).toFixed(2)}
+              ${(item?.amount * item?.price).toFixed(2)}
             </Figure.Caption>
           </Col>
           <Col>

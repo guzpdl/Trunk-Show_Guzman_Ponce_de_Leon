@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import "./CartModal.css";
@@ -60,7 +60,7 @@ const CartModal = () => {
           <>
             <Modal.Footer>
               <Modal.Title>
-                Total:{" "}
+                Total: ${" "}
                 {cart
                   .map((product) => product.amount * product.price)
                   .reduce((prev, next) => prev + next)
