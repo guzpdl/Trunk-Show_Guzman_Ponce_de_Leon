@@ -53,18 +53,18 @@ const CartModal = () => {
               </Button>
             </>
           ) : (
-            <CartFigures cartContent={cart} />
+            <CartFigures />
           )}
         </Modal.Body>
         {cart.length !== 0 && (
           <>
             <Modal.Footer>
               <Modal.Title>
-                {/* Total:{" "}
+                Total:{" "}
                 {cart
                   .map((product) => product.amount * product.price)
                   .reduce((prev, next) => prev + next)
-                  .toFixed(2)} */}
+                  .toFixed(2)}
               </Modal.Title>
             </Modal.Footer>
             <Modal.Footer>

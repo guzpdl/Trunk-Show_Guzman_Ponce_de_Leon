@@ -2,24 +2,24 @@ import React, { useEffect } from "react";
 import { Container, Figure, Row, Col, Button } from "react-bootstrap";
 import { useCartContext } from "../context/cart.context";
 
-const CartFigures = ({ cartContent }) => {
-  const { removeItemFromCart } = useCartContext();
+const CartFigures = () => {
+  const { removeItemFromCart, cart } = useCartContext();
 
   const handleRemove = (eventHTML) => {
     removeItemFromCart(+eventHTML.target.value);
   };
 
-  return cartContent.map((item, index) => {
+  return cart?.map((item, index) => {
     return (
       <Container key={index}>
         <Row>
           <Col>
             <Figure>
-              {/* <Figure.Image
+              <Figure.Image
                 width={100}
                 alt={index}
                 src={`../${item?.images?.img2}`}
-              /> */}
+              />
               <Figure.Caption>{item?.name}</Figure.Caption>
             </Figure>
           </Col>
@@ -34,7 +34,7 @@ const CartFigures = ({ cartContent }) => {
           <Col>
             <h6>Sub total</h6>
             <Figure.Caption>
-              {/* {(item?.amount * item?.price).toFixed(2)} */}
+              {(item?.amount * item?.price).toFixed(2)}
             </Figure.Caption>
           </Col>
           <Col>
