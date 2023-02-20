@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Container, Col, Row, Image, Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useCartContext } from "../context/cart.context";
 
 const ItemDetails = ({ products }) => {
   const { itemId } = useParams();
   let [count, setCount] = useState(0);
   const { addItemToCart } = useCartContext();
+  const navigate = useNavigate();
 
   const numberId = parseInt(itemId);
 
@@ -21,6 +22,10 @@ const ItemDetails = ({ products }) => {
   const decrementCount = () => {
     if (count > 0) count = count - 1;
     setCount(count);
+  };
+
+  const handleClick = () => {
+    navigate(-1);
   };
 
   useEffect(() => {
@@ -81,6 +86,13 @@ const ItemDetails = ({ products }) => {
               </Button>
             </div>
           </div>
+          <Button
+            className="my-4"
+            variant="outline-secondary"
+            onClick={handleClick}
+          >
+            See more products
+          </Button>
         </Col>
       </Row>
     </Container>
