@@ -24,7 +24,7 @@ const Products = ({ products, bags, totes }) => {
                       className="text-muted"
                       style={{ textDecoration: "none" }}
                     >
-                      <Card.Img variant="top" src={bag.images.img2} />
+                      <Card.Img variant="top" src={bag.images[1]} />
                       <Card.Body>
                         <Card.Title>{bag.name}</Card.Title>
                       </Card.Body>
@@ -45,7 +45,7 @@ const Products = ({ products, bags, totes }) => {
                       className="text-muted"
                       style={{ textDecoration: "none" }}
                     >
-                      <Card.Img variant="top" src={tote.images.img2} />
+                      <Card.Img variant="top" src={tote.images[1]} />
                       <Card.Body>
                         <Card.Title>{tote.name}</Card.Title>
                       </Card.Body>
@@ -65,7 +65,7 @@ const Products = ({ products, bags, totes }) => {
                       className="text-muted"
                       style={{ textDecoration: "none" }}
                     >
-                      <Card.Img variant="top" src={product.images.img2} />
+                      <Card.Img variant="top" src={product.images[0]} />
                       <Card.Body>
                         <Card.Title>{product.name}</Card.Title>
                       </Card.Body>

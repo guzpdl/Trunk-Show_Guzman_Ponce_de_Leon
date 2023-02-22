@@ -20,7 +20,7 @@ const ItemListContainer = ({ bags, totes }) => {
                   className="text-muted"
                   style={{ textDecoration: "none" }}
                 >
-                  <Card.Img variant="top" src={bag.images.img1} />
+                  <Card.Img variant="top" src={bag.images[0]} />
                   <Card.Body>
                     <Card.Title>{bag.name}</Card.Title>
                   </Card.Body>
@@ -43,7 +43,7 @@ const ItemListContainer = ({ bags, totes }) => {
                   className="text-muted"
                   style={{ textDecoration: "none" }}
                 >
-                  <Card.Img variant="top" src={tote.images.img1} />
+                  <Card.Img variant="top" src={tote.images[0]} />
                   <Card.Body>
                     <Card.Title>{tote.name}</Card.Title>
                   </Card.Body>

@@ -7,3 +7,5 @@ const getProducts = () => {
 };
 
 export default getProducts;
+
+// replaced by Firebase

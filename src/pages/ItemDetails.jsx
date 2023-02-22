@@ -9,11 +9,11 @@ const ItemDetails = ({ products }) => {
   const { addItemToCart } = useCartContext();
   const navigate = useNavigate();
 
-  const numberId = parseInt(itemId);
-
   const selectedProduct = products.find(
-    (chosenProduct) => chosenProduct.id === numberId
+    (chosenProduct) => chosenProduct.id === itemId
   );
+
+  console.log(selectedProduct);
 
   const incrementCount = () => {
     count = count + 1;
@@ -37,14 +37,14 @@ const ItemDetails = ({ products }) => {
       <Row>
         <Col lg={8} md={6}>
           <Image
-            src={`../${selectedProduct?.images?.img1}`}
+            src={`../${selectedProduct?.images?.[0]}`}
             alt={itemId}
             style={{ width: "24rem" }}
             className="me-4 my-4"
             fluid
           />
           <Image
-            src={`../${selectedProduct?.images?.img2}`}
+            src={`../${selectedProduct?.images?.[1]}`}
             alt={itemId}
             style={{ width: "24rem" }}
             fluid

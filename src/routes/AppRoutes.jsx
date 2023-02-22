@@ -3,21 +3,22 @@ import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import ItemDetails from "../pages/ItemDetails";
 import Products from "../pages/Products";
-import getProducts from "../service/axios.service";
+// import getProducts from "../service/axios.service";
+import { getProductsFirebase } from "../service/firebase.service";
 
 const AppRoutes = () => {
   const [products, setProducts] = useState([]);
 
-  const productData = () => {
-    getProducts()
-      .then((productsInfo) => {
-        setProducts(productsInfo.products);
+  const firebaseData = () => {
+    getProductsFirebase()
+      .then((prodInfo) => {
+        setProducts(prodInfo);
       })
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    productData();
+    firebaseData();
   }, []);
 
   const bags = products.filter((product) => product.category === "bags");

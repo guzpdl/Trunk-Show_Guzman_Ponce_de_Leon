@@ -6,7 +6,7 @@ const CartFigures = () => {
   const { removeItemFromCart, cart } = useCartContext();
 
   const handleRemove = (eventHTML) => {
-    removeItemFromCart(+eventHTML.target.value);
+    removeItemFromCart(eventHTML.target.value);
   };
 
   return cart?.map((item, index) => {
@@ -18,7 +18,7 @@ const CartFigures = () => {
               <Figure.Image
                 width={100}
                 alt={index}
-                src={`../${item?.images?.img2}`}
+                src={`../${item?.images?.[1]}`}
               />
               <Figure.Caption>{item?.name}</Figure.Caption>
             </Figure>
