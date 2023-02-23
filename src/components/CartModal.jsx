@@ -5,6 +5,7 @@ import "./CartModal.css";
 import { useCartContext } from "../context/cart.context";
 import { useNavigate } from "react-router-dom";
 import CartFigures from "./CartFigures";
+import CheckoutOffCanvas from "./CheckoutOffCanvas";
 
 const CartModal = () => {
   const [show, setShow] = useState(false);
@@ -75,9 +76,7 @@ const CartModal = () => {
               >
                 Add more products to your bag
               </Button>
-              <Button variant="success" className="bg-white text-success">
-                Proceed to payment
-              </Button>
+              <CheckoutOffCanvas />
             </Modal.Footer>
           </>
         )}
