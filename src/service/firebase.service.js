@@ -1,5 +1,11 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  doc,
+  getDoc,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAt_IDeJZbDokbAlB1i193nrLd4ytysKR0",
@@ -24,4 +30,14 @@ export const getProductsFirebase = async () => {
     return newDoc;
   });
   return docsInfo;
+};
+
+export const getOneProductFirebase = async (itemId) => {
+  const queryRef = doc(db, "productList", itemId);
+  const response = await getDoc(queryRef);
+  const newDoc = {
+    id: response.id,
+    ...response.data(),
+  };
+  return newDoc;
 };

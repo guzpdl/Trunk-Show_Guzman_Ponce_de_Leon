@@ -2,18 +2,22 @@ import React, { useEffect, useState } from "react";
 import { Container, Col, Row, Image, Button } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import { useCartContext } from "../context/cart.context";
+import { getOneProductFirebase } from "../service/firebase.service";
 
-const ItemDetails = ({ products }) => {
+const ItemDetails = () => {
   const { itemId } = useParams();
   let [count, setCount] = useState(0);
+  let [item, setItem] = useState();
   const { addItemToCart } = useCartContext();
   const navigate = useNavigate();
 
-  const selectedProduct = products.find(
-    (chosenProduct) => chosenProduct.id === itemId
-  );
-
-  console.log(selectedProduct);
+  const getProductData = () => {
+    getOneProductFirebase(itemId)
+      .then((productData) => {
+        setItem(productData);
+      })
+      .catch((error) => console.log(error));
+  };
 
   const incrementCount = () => {
     count = count + 1;
@@ -30,6 +34,7 @@ const ItemDetails = ({ products }) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    getProductData();
   }, []);
 
   return (
@@ -37,14 +42,14 @@ const ItemDetails = ({ products }) => {
       <Row>
         <Col lg={8} md={6}>
           <Image
-            src={`../${selectedProduct?.images?.[0]}`}
+            src={`../${item?.images?.[0]}`}
             alt={itemId}
             style={{ width: "24rem" }}
             className="me-4 my-4"
             fluid
           />
           <Image
-            src={`../${selectedProduct?.images?.[1]}`}
+            src={`../${item?.images?.[1]}`}
             alt={itemId}
             style={{ width: "24rem" }}
             fluid
@@ -53,9 +58,9 @@ const ItemDetails = ({ products }) => {
 
         <Col className="mt-4  text-dark h-75" lg={4} md={6}>
           {" "}
-          <h2>{selectedProduct?.name}</h2>
-          <p className="pt-2">{selectedProduct?.description}</p>
-          <h5 className="pt-5">Price ${selectedProduct?.price} </h5>
+          <h2>{item?.name}</h2>
+          <p className="pt-2">{item?.description}</p>
+          <h5 className="pt-5">Price ${item?.price} </h5>
           <div className="pt-2">
             <p>Quantity</p>
             <div className="d-flex align-items-baseline ">
@@ -78,7 +83,7 @@ const ItemDetails = ({ products }) => {
                 className="ms-1 square rounded-0"
                 variant="outline-secondary"
                 onClick={() => {
-                  addItemToCart(selectedProduct, count);
+                  addItemToCart(item, count);
                   setCount(0);
                 }}
               >
